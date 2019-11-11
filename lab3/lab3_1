@@ -1,1 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+float a,month,year; // декларируем переменные
 
+for (a = 10000; a<=20000; ++month){ //цикл выполняется до тех пор, пока a<=20000, и с каждым выполнением цикла переменной к переменной month прибавляется единица
+a+=a*0.03/12;
+}
+year = month/12;
+printf("Kolichestvo let = %f", year); //выводим результат
+
+	return 0;
+}
