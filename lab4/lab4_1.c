@@ -2,22 +2,22 @@
 
 int main(){
     
-    int h,i;
+    int k,i;
     
     
     printf("Vvedite kol-vo elementov massiva");
-    scanf("%d", &h);
+    scanf("%d", &k);
     
     
-    int a[h+1];
+    int a[k+1];
     
     
-    for(i=1;i<=h;i++)
+    for(i=1;i<=k;i++)
     {
     	scanf("%d", &a[i]);
     }
     
-    for(i=h; i>=1; i--){
+    for(i=k; i>=1; i--){
     	printf("%d",a[i]);
 	}
   return 0;
