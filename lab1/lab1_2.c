@@ -5,7 +5,7 @@
 
 int main(void) {
 	
-	float x,y,z,a,b,c,d,s; //декларируем переменные
+	float x,y,z,a,b,c,s; //декларируем переменные
 	
 	printf("Vvedite zmachenija peremennix x, y, z ");
 	scanf("%f \n %f \n %f", &x, &y, &z); //считываем значения переменных с клавиатуры
@@ -15,7 +15,7 @@ int main(void) {
 	s = (a/b)-c; //рассчитываем результат
 	
 
-    printf("%f \n",s); //выводим результат на экран
+    printf("Result = %f \n",s); //выводим результат на экран
 	
 	
 	
