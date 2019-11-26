@@ -2,7 +2,7 @@
 
 int main(){
 
-    int n,m,i,j,sum,tmp,tmp1,tmpp,tmpp1;
+    int n,m,i,j,sum,temp,temp1,temp2,temp3;
     
     printf("vvedite kol-vo strok ");
     scanf("%d", &n);
@@ -30,14 +30,14 @@ int main(){
     for(i=0;i<n;i++){
         for(j=i;j<n;j++){
     if(b[i]<b[j]){
-        tmp=b[i];
-        tmp1=b[j];
-        tmpp=c[i];
-        tmpp1=c[j];
-        b[i]=tmp1;
-        b[j]=tmp;
-        c[i]=tmpp1;
-        c[j]=tmpp;
+        temp=b[i];
+        temp1=b[j];
+        temp2=c[i];
+        temp3=c[j];
+        b[i]=temp1;
+        b[j]=temp;
+        c[i]=temp3;
+        c[j]=temp2;
         }
         
     }
