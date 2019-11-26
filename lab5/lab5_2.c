@@ -46,8 +46,8 @@ int main(){
 		  }
 		if(a[i][j] == mini && a[i][j]==maxj) 
 		  printf("Sedlovaya tochka imeet adress a[%d][%d]\n",i,j);
-        if(a[i][j] == maxi && a[i][j] == minj) 
-          printf("Sedlovaya tochka imeet adress a[%d][%d]\n",i,j);
+                if(a[i][j] == maxi && a[i][j] == minj) 
+                  printf("Sedlovaya tochka imeet adress a[%d][%d]\n",i,j);
 	   
 
        }
