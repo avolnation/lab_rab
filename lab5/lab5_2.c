@@ -45,9 +45,9 @@ int main(){
 		  	maxj = a[i][h];
 		  }
 		if(a[i][j] == mini && a[i][j]==maxj) 
-		  printf("i: %d j: %d\n",i,j);
+		  printf("Sedlovaya tochka imeet adress a[%d][%d]\n",i,j);
         if(a[i][j] == maxi && a[i][j] == minj) 
-          printf("i: %d j: %d\n",i,j);
+          printf("Sedlovaya tochka imeet adress a[%d][%d]\n",i,j);
 	   
 
        }
