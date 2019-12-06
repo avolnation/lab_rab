@@ -20,7 +20,8 @@ int main(){
 
     for(min = A, max = &A[n]; min < max; min++){
         if(*min % 2 == 0){
-            comp *= elem[count++];
+            elem[count++] = *min;
+            comp *= *elem;
         }
     }
     printf("Proizvedenie chetnix elementov ravno %d", comp);
