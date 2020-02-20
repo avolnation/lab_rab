@@ -15,13 +15,34 @@ int main()
                 printf("a[0][%d] = %f ",j,matrixNew[0][j]); 
             }
             printf("\n");
-    //операции с первой и второй строкой
+    //операции над второй строкой
             if(matrixFull[1][0]>0){
             for(j=0;j<4;j++){
                 matrixNew[1][j] = (matrixNew[0][j]*(-matrixFull[1][j])) + matrixFull[1][j];
                 printf("a[1][%d] = %f ",j,matrixNew[1][j]);
-            }
-            }
             
+            }
+            }
+            else if(matrixFull[1][0]<0){
+                for(j=0;j<4;j++){
+                matrixNew[1][j] = (matrixNew[0][j]*matrixFull[1][j]) + (-matrixFull[1][j]);
+                printf("a[1][%d] = %f ",j,matrixNew[1][j]);
+            }
+            printf("\n");
+            }
+    //операции над третьей строкой
+            if(matrixFull[2][0]>0){
+                for(j=0;j<4;j++){
+                    matrixNew[2][j] = (matrixNew[0][j]*matrixFull[2][j]) + (-matrixFull[2][j]);
+                     printf("a[2][%d] = %f ",j,matrixNew[2][j]);
+                }
+                
+            }
+            else if(matrixFull[2][0]<0){
+              for(j=0;j<4;j++){
+                    matrixNew[2][j] = (matrixNew[0][j]*(-matrixFull[2][j])) + matrixFull[2][j];  
+                     printf("a[2][%d] = %f ",j,matrixNew[2][j]);
+            }
+            printf("\n");
             return 0;
 }
