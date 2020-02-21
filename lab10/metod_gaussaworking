@@ -9,13 +9,13 @@ int main()
                           {0,0,0,0},
                           {0,0,0,0}};
    int i,j;
-   //делим всю первую строку на первый элеменнт данной строки
+   //äåëèì âñþ ïåðâóþ ñòðîêó íà ïåðâûé ýëåìåíò äàííîé ñòðîêè 
             for(j=0;j<4;j++){
                 matrixNew[0][j] = matrixFull[0][j]/matrixFull[0][0];
                 printf("a[0][%d] = %f ",j,matrixNew[0][j]); 
             }
             printf("\n");
-    //операции над второй строкой
+    //ïðèâîäèì âòîðóþ ñòðîêó ê âèäó 0 ... ...
             if(matrixFull[1][0]>0){
             for(j=0;j<4;j++){
                 matrixNew[1][j] = (matrixNew[0][j]*(-matrixFull[1][j])) + matrixFull[1][j];
@@ -30,7 +30,7 @@ int main()
             }
             }
                printf("\n");
-    //операции над третьей строкой
+    //ïðèâîäèì òðåòüþ ñòðîêó ê âèäó 0 ... ...
             if(matrixFull[2][0]>0){
                 for(j=0;j<4;j++){
                     matrixNew[2][j] = (matrixNew[0][j]*matrixFull[2][j]) + (-matrixFull[2][j]);
@@ -45,5 +45,23 @@ int main()
             }
             }
             printf("\n");
+            printf("\n");
+            printf("NewMatrix:\n");
+            for(i=0;i<3;i++){
+                for(j=0;j<4;j++){
+                    printf("a[%d][%d]= %f ", i, j, matrixNew[i][j]);
+                    
+                }
+                printf("\n");
+            }
+            printf("\n");
+			for(j=0;j<4;j++){
+            	matrixNew[1][j] = matrixNew[1][j]/matrixNew[1][1];
+            		printf("a[1][%d] = %f ",j,matrixNew[1][j]);
+			}
+			printf("\n");
+		for(j=0;j<4;j++){
+            printf("a[1][%d] = %f ",j,matrixNew[1][j]);
+			}
             return 0;
 }
