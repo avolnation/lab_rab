@@ -2,6 +2,7 @@
 
 int main()
 {
+   float SElement;
    float matrixFull[3][4]={{2.5,-3.12,-4.03,-7.5},
                            {0.61,0.71,-0.05,0.44},
                            {-1.03,-2.05,0.87,-1.16}};
@@ -46,22 +47,28 @@ int main()
             }
             printf("\n");
             printf("\n");
-            printf("NewMatrix:\n");
-            for(i=0;i<3;i++){
-                for(j=0;j<4;j++){
-                    printf("a[%d][%d]= %f ", i, j, matrixNew[i][j]);
-                    
-                }
-                printf("\n");
-            }
-            printf("\n");
-			for(j=0;j<4;j++){
+			for(j=4;j>=0;j--){
             	matrixNew[1][j] = matrixNew[1][j]/matrixNew[1][1];
-            		printf("a[1][%d] = %f ",j,matrixNew[1][j]);
+					printf("a[1][%d] = %f ",j,matrixNew[1][j]);
 			}
 			printf("\n");
-		for(j=0;j<4;j++){
-            printf("a[1][%d] = %f ",j,matrixNew[1][j]);
+			for(j=0;j<4;j++){
+			if(matrixNew[2][1]>0){
+			matrixNew[2][j] = (matrixNew[1][j]*matrixNew[2][1])+(-matrixNew[2][j]);
+		}
+			else if(matrixNew[2][1]<0){
+			
+			matrixNew[2][j] = (matrixNew[1][j]*(-matrixNew[2][1]))+matrixNew[2][j];
 			}
+			printf("a[2][%d] = %f ",j,matrixNew[2][j]);
+	}
+	printf("\n \n");
+	for(i=0;i<3;i++){
+		for(j=0;j<4;j++){
+		printf("a[%d][%d] = %f ",i,j,matrixNew[i][j]);		
+		}
+		printf("\n");
+	}
+
             return 0;
 }
