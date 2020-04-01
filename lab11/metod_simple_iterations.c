@@ -6,7 +6,22 @@
     float matrix[i][j] = {{2.5,-3.12,-4.03,-7.5},
                            {0.61,0.71,-0.05,0.44},
                             {-1.03,-2.05,0.87,-1.16}};
+    float buffMatrix[i][j] = {0};
 
+void MaximumInRow(){
+     int k,l;
+    for(k=0;k<i;k++){
+        buffMatrix[0][k] = matrix[2][k];
+        buffMatrix[2][k] = matrix[0][k];
+        buffMatrix[1][k] = matrix[1][k];
+    }
+       for(k=0;k<i;k++){ 
+           for(l=0;l<j;l++){
+        printf("%f ",buffMatrix[k][l]);
+                    }
+printf("\n");
+        }
+}
 
 void printMatrix(void){
     int k,l;
@@ -51,8 +66,10 @@ void printMatrix(void){
  }
  }
  int main (){
-     prSvChl();
+     MaximumInRow();
+     /*prSvChl();
      iterativeTransition();
-     convergence();
+     convergence();*/
+     //printMatrix();
      return 0;
 }
