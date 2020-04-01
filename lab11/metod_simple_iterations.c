@@ -11,11 +11,11 @@
 void MaximumInRow(){
      int k,l;
     for(k=0;k<i;k++){
-        buffMatrix[0][k] = matrix[1][k];
+        buffMatrix[0][k] = matrix[2][k];
+        buffMatrix[1][k] = matrix[1][k];
         buffMatrix[2][k] = matrix[0][k];
-        buffMatrix[1][k] = matrix[2][k];
         
-        //buffMatrix[0][k] = ((buffMatrix[0][k])+buffMatrix[1][k]);
+        buffMatrix[0][k] = ((buffMatrix[0][k])+buffMatrix[2][k]);
     }
        for(k=0;k<i;k++){ 
            for(l=0;l<j-1;l++){
