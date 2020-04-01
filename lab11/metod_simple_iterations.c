@@ -26,15 +26,24 @@ void printMatrix(void){
      }
      printMatrix();
  }
+ void prSvChl(){
+     int k,l;
+     for(k=0;k<i;k++){
+         matrix[k][3] = matrix[k][3] / matrix[k][k];
+     }
+     
+ }
  void convergence(void){
      int k,l;
      float sum,rootFromSum;
      for(k=0;k<i;k++){
          for(l=0;l<j-1;l++){
-             sum += matrix[k][l];
+             sum += pow(matrix[k][l],2);
          }
      }
     rootFromSum = sqrt(sum);
+    printf("%f\n",sum);
+    printf("%f\n",rootFromSum);
     if(rootFromSum<1){
         printf("Successful");}
     else{ 
@@ -42,6 +51,8 @@ void printMatrix(void){
  }
  }
  int main (){
+     prSvChl();
      iterativeTransition();
+     convergence();
      return 0;
 }
